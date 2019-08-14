@@ -29,19 +29,6 @@ static unsigned int hfunc(void *priv, struct sk_buff *skb, const struct nf_hook_
 	}
 
     return NF_ACCEPT;
-    /*
-	iph = ip_hdr(skb);
-	if (iph->protocol == IPPROTO_UDP) {
-		udph = udp_hdr(skb);
-		if (ntohs(udph->dest) == 53) {
-			return NF_ACCEPT;
-		}
-	}
-	else if (iph->protocol == IPPROTO_TCP) {
-		return NF_ACCEPT;
-	}
-	
-	return NF_DROP;*/
 }
 
 
